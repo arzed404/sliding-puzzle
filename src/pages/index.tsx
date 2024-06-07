@@ -19,16 +19,18 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="flex flex-col md:flex-row">
-                <div className="mr-8 mb-8 md:mb-0">
-                    <Leaderboard entries={leaderboard} />
-                </div>
-                <div>
+        <div className="max-w-full border-2 border-indigo-600 flex flex-col justify-between h-screen flex-wrap lg:flex-row lg:flex-nowrap">
+            {/* <div className="flex flex-col md:flex-row"> */}
+            <div className="w-full h-screen lg:w-[30%] bg-gray-300">
+                <Leaderboard entries={leaderboard} />
+            </div>
+            <div className="bg-red-500 flex items-center justify-center w-full lg:w-[70%] ">
+                <div >
                     <Info moves={moveCounter} time={timer} />
                     <Puzzle setMoveCounter={setMoveCounter} setTimer={setTimer} updateLeaderboard={updateLeaderboard} />
                 </div>
             </div>
+            {/* </div> */}
         </div>
     );
 };

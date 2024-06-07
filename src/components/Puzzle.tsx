@@ -96,7 +96,7 @@ const Puzzle: React.FC<PuzzleProps> = ({ setMoveCounter, setTimer, updateLeaderb
     };
 
     return (
-        <div className="grid grid-cols-3 grid-rows-3 gap-2">
+        <div className="border-2 border-indigo-600 grid grid-cols-3 grid-rows-3 gap-2">
             {puzzleState.map((value, index) => (
                 <div
                     key={index}
